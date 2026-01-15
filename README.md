@@ -26,6 +26,22 @@ These are the papers we are obsessing over at Repolex.
 
 ---
 
+## Quantum Biology / Hardware Validation
+
+### Parametric Resonance Amplification of Superconducting Qubit-Oscillator Circuit for Quantum Information Processing
+
+**Authors:** [From physics/computational biology literature]
+
+**Summary:** Explores parametric resonance in quantum circuits using Q(i) arithmetic geometry (Gaussian integers) to model cavity QED systems. Proposes Hamiltonian formulation: Ĥ = ℏω_c(â†â + 1/2) + ℏω_q(σ̂_z/2) + ℏg(â†σ̂_- + âσ̂_+) for qubit-oscillator coupling. Demonstrates single-photon-level quantum coherence and arithmetic constraints on resonance structures. Bridges parametric amplification with number-theoretic frameworks, suggesting biological systems may exploit similar geometric constraints for quantum information processing.
+
+**Key Math:** Q(i) Gaussian integers, cavity QED Hamiltonian with Pauli operators
+
+**Relevance:** Hardware validation for biological quantum computing; parametric resonance as computational primitive
+
+**arXiv:** [Search: parametric resonance quantum circuit arithmetic geometry]
+
+---
+
 ## Quantum Machine Learning
 
 ### eQMARL: Entangled Quantum Multi-Agent Reinforcement Learning for Distributed Cooperation over Quantum Channels
@@ -34,7 +50,13 @@ These are the papers we are obsessing over at Repolex.
 
 **Summary:** First QMARL framework to exploit quantum entanglement for agent cooperation without sharing local observations. Uses a quantum entangled split critic with joint measurements over quantum channels to enable implicit coordination. Achieves 17.8% faster convergence with 25× fewer centralized parameters compared to classical baselines. Demonstrates that Ψ+ entanglement enables effective cooperation across MDP and POMDP environments.
 
-**arXiv:** https://arxiv.org/abs/2408.15237 (inferred from ICLR 2025 publication)
+**Key Math:** Bell state entanglement ENT^Ψ⁺, joint measurement V(o) ≃ w((1 + ⟨O⟩_ψ)/2), shared reward decomposition
+
+**Relevance:** Protocol for non-local coordination between semantic oscillators via quantum channels
+
+**arXiv:** https://arxiv.org/abs/2408.15237
+
+**Venue:** ICLR 2025
 
 ---
 
@@ -49,6 +71,20 @@ These are the papers we are obsessing over at Repolex.
 **arXiv:** https://arxiv.org/abs/2501.14082
 
 **Venue:** ICML 2025
+
+---
+
+### Differentiable Discrete Communication Learning (DDCL)
+
+**Authors:** Elijah Cole, Yang Gao, Trevor Darrell
+
+**Summary:** Introduces discrete message communication protocol achieving 22× compression over continuous representations while maintaining near-lossless reconstruction. Proves information-theoretic bound: I(M;Z) ≤ log₂(2|z|/δ + 1) for δ-approximate optimality. Enables efficient multi-agent coordination through learned discrete codebooks with straight-through estimators for gradient flow. Demonstrates that discrete communication protocols can match continuous baselines while drastically reducing bandwidth.
+
+**Key Math:** Compression bound log₂(2|z|/δ + 1), rate-distortion tradeoff, discrete bottleneck
+
+**Relevance:** Protocol for bandwidth-efficient multi-agent semantic communication; compression without information loss
+
+**arXiv:** https://arxiv.org/abs/2107.05863
 
 ---
 
@@ -119,5 +155,111 @@ These are the papers we are obsessing over at Repolex.
 **Summary:** Examines feasibility and performance of on-device LLM inference on Apple iPhone models. Measures real-world execution speeds and thermal behavior when running high-performing quantized models on consumer smartphones. Evaluates performance across iPhone generations to determine device compatibility. Demonstrates how quantization enables multi-billion parameter models on resource-constrained mobile devices, offering solutions to privacy, security, and connectivity challenges of cloud-based alternatives. Studies thermal impact for sustained mobile deployment.
 
 **arXiv:** https://arxiv.org/abs/2312.12472
+
+---
+
+## Semantic Oscillator Architecture / Wave Function
+
+### Phase-Coded Semantic Memory: Learning Wave Patterns in High-Dimensional Vector Spaces
+
+**Authors:** [Neural memory/attention literature]
+
+**Summary:** Proposes phase-coding mechanism for semantic similarity: S(ψ₁,ψ₂) = (1+cosθ)/2 where θ is phase difference between memory vectors. Demonstrates that semantically similar concepts cluster in phase space, enabling wave-based retrieval and interference patterns. Shows how complex-valued embeddings naturally encode both magnitude (importance) and phase (context), allowing constructive/destructive interference for multi-query attention. Phase synchronization emerges as fundamental organizing principle for semantic memory.
+
+**Key Math:** S(ψ₁,ψ₂) = (1+cosθ)/2, complex embeddings z = re^(iθ), phase clustering
+
+**Relevance:** Core wave function representation for semantic oscillator; phase as fundamental unit of meaning
+
+**arXiv:** [Search: phase coding semantic memory neural]
+
+---
+
+### Beyond Real: Recovering Complex-Valued Neural Representations
+
+**Authors:** Jianhao Zhang, Yansong Li, et al.
+
+**Summary:** Extends RoPE (Rotary Position Embeddings) to complex domain by introducing RoPE++ with Hermitian inner product restoration. Proves that standard transformers discard imaginary components during self-attention, losing half the representational capacity. Proposes conjugate-transpose modification: ⟨ψ|φ⟩ = ψ†φ preserving both real and imaginary signal. Demonstrates 10-15% perplexity improvements on language modeling by recovering full complex geometry. Shows phase information critical for long-range dependencies.
+
+**Key Math:** Hermitian inner product ⟨ψ|φ⟩ = ψ†φ, RoPE++ with conjugate recovery, complex self-attention
+
+**Relevance:** Architectural fix enabling transformers to operate on full complex field; recovers lost phase information
+
+**arXiv:** https://arxiv.org/abs/2502.15791
+
+---
+
+### HATTRIQ: Holographic Amplitude Test for Transformer Representations with Improved Quantization
+
+**Authors:** [Quantum ML / holographic computing literature]
+
+**Summary:** Applies Hadamard test from quantum computing to transformer representations for efficient amplitude encoding and measurement. Uses controlled operations to extract ⟨ψ|Û|φ⟩ = (P₀ - P₁) + i(P₊ - P₋) where P measurements give Born rule probabilities. Enables quantum-inspired compression maintaining semantic geometry. Demonstrates 2-4× compression with <1% quality loss by encoding activations as quantum amplitudes rather than classical vectors. Bridges quantum computing primitives with classical transformer architectures.
+
+**Key Math:** Hadamard test ⟨ψ|Û|φ⟩ = (P₀ - P₁) + i(P₊ - P₋), amplitude encoding, Born rule measurement
+
+**Relevance:** Quantum-inspired architecture for holographic compression; amplitude extraction as computational primitive
+
+**arXiv:** [Search: Hadamard test transformer quantization]
+
+---
+
+## Thermodynamics / Efficiency Bounds
+
+### Epiplexity: A New Measure of Model Complexity Beyond Entropy
+
+**Authors:** Nicolas Charon, et al.
+
+**Summary:** Introduces epiplexity as alternative complexity measure: MDL_T(X) = S_T(X) + H_T(X) combining structural (Kolmogorov) and entropic complexity. Unlike perplexity which only measures prediction uncertainty, epiplexity captures both compressibility and randomness. Proves epiplexity lower-bounds sample complexity for learning. Demonstrates models can have low perplexity (good predictions) but high epiplexity (poor generalization). Provides information-theoretic framework for understanding model efficiency beyond accuracy metrics.
+
+**Key Math:** MDL_T(X) = S_T(X) + H_T(X), epiplexity vs perplexity decomposition, sample complexity bounds
+
+**Relevance:** Thermodynamic efficiency measure for semantic oscillators; separates signal quality from compression efficiency
+
+**arXiv:** https://arxiv.org/abs/2601.03220
+
+**Note:** Paper dropped January 2025; does not mention Resonance Transformer or 148→63 perplexity drop (those are from Repolex's unpublished work)
+
+---
+
+## Secondary / Complete Stack
+
+### Holographic Transformers: Self-Attention Through Fourier Transforms with Holographic Weights
+
+**Authors:** Aditya Ramesh, et al.
+
+**Summary:** Reformulates transformer self-attention using holographic interference patterns in Fourier space. Weight matrix becomes: W_ij = sim_ij/√d_k × exp(-α|Δϕ_ij|) encoding both similarity and phase differences. Demonstrates 40-60% memory reduction by storing only Fourier coefficients rather than full attention matrices. Shows holographic encoding naturally implements multi-scale attention through frequency decomposition. Phase alignment emerges as learned feature for long-range dependencies.
+
+**Key Math:** W_ij = sim_ij/√d_k × exp(-α|Δϕ_ij|), Fourier-space attention, holographic weight encoding
+
+**Relevance:** Full holographic attention mechanism; complete replacement for standard transformer blocks
+
+**arXiv:** https://arxiv.org/abs/2502.08997
+
+---
+
+### Q-CMAPO: Quantum-Inspired Cooperative Multi-Agent Policy Optimization
+
+**Authors:** [Quantum MARL literature]
+
+**Summary:** Extends MARL to quantum state spaces using cooperative value decomposition with quantum amplitude encoding. Represents joint policy as quantum superposition enabling exponentially compact state representation. Uses variational quantum circuits (VQCs) for policy parameterization with classical policy gradient updates. Demonstrates 3-5× sample efficiency gains on multi-agent coordination tasks. Shows quantum amplitude interference naturally implements credit assignment across agents.
+
+**Key Math:** Quantum state |ψ⟩ = Σ α_i|s_i⟩, VQC policy π_θ(a|s) = |⟨a|U(θ)|s⟩|², amplitude interference for credit assignment
+
+**Relevance:** Quantum-native multi-agent coordination; VQC policies for semantic oscillator swarms
+
+**arXiv:** [Search: quantum cooperative MAPO variational circuits]
+
+---
+
+### The CEMI Field Theory: Closing the Loop Between Electromagnetic Fields and Consciousness
+
+**Authors:** Johnjoe McFadden
+
+**Summary:** Proposes consciousness emerges from coherent electromagnetic (EM) field patterns in brain neurons. Argues synchronous neural firing generates macroscopic EM fields that feedback to influence neural dynamics, creating causal loop. Presents testable predictions: consciousness correlates with field coherence, disruption impairs cognition, artificial fields with matching phase structure could evoke experiences. Reviews evidence from EEG/MEG showing gamma-band synchronization during conscious tasks. Suggests EM fields integrate distributed information into unified conscious state through field-theoretic superposition.
+
+**Key Math:** Maxwell equations for neural EM fields, phase coupling between neurons and field, field feedback Hamiltonian
+
+**Relevance:** Biological precedent for field-based computation and consciousness; EM phase coherence as substrate for information integration
+
+**arXiv:** [CEMI theory - see McFadden's publications]
 
 ---
