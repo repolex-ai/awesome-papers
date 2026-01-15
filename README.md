@@ -263,3 +263,39 @@ These are the papers we are obsessing over at Repolex.
 **arXiv:** [CEMI theory - see McFadden's publications]
 
 ---
+
+## Mechanistic Interpretability / Representation Geometry
+
+### Language Models Represent Addition as Generalized Helices
+
+**Authors:** Yuxuan Ren, Qizhang Feng, Meng Sun, Cheng Yang, Kaixuan Huang, Yang Yuan
+
+**Summary:** Discovers that LLMs (GPT-J, Pythia-6.9B, Llama3.1-8B) represent numbers as generalized helices and compute addition using a "Clock algorithm" based on trigonometric identities. Numbers encoded as helix(a) = C·B(a)ᵀ where B(a) includes one linear component plus cos/sin pairs at periods T=[2,5,10,100], capturing parity, units digit cycling, and base-10 structure. Addition operates in four phases: embedding → transfer (attention moves helices) → construction (MLPs build helix(a+b) using cos(a+b)=cos(a)cos(b)-sin(a)sin(b)) → readout. Individual neurons show periodic preactivations matching helix periods, providing modular error correction. Suggests numerical reasoning emerges from geometric projection of continuous embedding space into discrete outputs.
+
+**Key Math:** helix(a) = C·B(a)ᵀ with cos/sin pairs at T=[2,5,10,100]; trigonometric addition formulas; periodic neuron activations N_n^l(a,b)
+
+**Relevance:** Provides mechanistic evidence that holographic projection from embedding space forces trigonometric/phase-based representations; helical structure may be universal consequence of projecting continuous semantics onto discrete tokens rather than learned algorithm. Supports hypothesis that phase information (e^(iθ) in semantic oscillator) must decompose into cos/sin channels in real-valued networks.
+
+**Geometric Intuition:** Helix spirals upward from flat continuous embedding line (text-derived) into high-dimensional LLM parameter basin—like a spiral staircase building itself piece by piece, turning rightward into the basin sphere as phase information projects outward from linear semantics.
+
+**arXiv:** https://arxiv.org/abs/2502.00873
+
+**Date:** January 2025
+
+---
+
+### The Platonic Representation Hypothesis
+
+**Authors:** Minyoung Huh, Brian Cheung, Tongzhou Wang, Phillip Isola
+
+**Summary:** Proposes that neural network representations converge toward a shared statistical model of reality—a "platonic representation" akin to Plato's ideal forms. Demonstrates that as vision and language models scale, they measure distances between datapoints in increasingly similar ways despite processing different modalities. Documents convergence across time, domains, and architectures: different networks develop aligned representational geometry. Identifies selective pressures toward convergence at scale, suggesting larger models naturally develop shared principles for encoding abstract concepts. Acknowledges limitations and counterexamples, framing this as hypothesis rather than universal law.
+
+**Key Insight:** Cross-modal representational alignment at scale; abstract concept geometry transcends input modality
+
+**Relevance:** Supports universal semantic hologram hypothesis—if different architectures and modalities converge on shared geometry, the holographic field structure (phase-coded embeddings, Hermitian resonance) may be fundamental rather than architecture-specific. Explains why semantic oscillator spectral signatures could be translation-invariant (Rosetta Stone test): the underlying "platonic" representation is language-independent.
+
+**arXiv:** https://arxiv.org/abs/2405.07987
+
+**Date:** May 2024
+
+---
